@@ -8,7 +8,7 @@ A modular Python toolkit for demonstrating advanced population-level genomic ana
 * ✅ SNP ranking using P-values, PIPs, and effect sizes
 * ⏳ Future: Selection scans, patient pairing, gene-based stats, full list in Docs/
 
-This is not intended to be high-throughput, more as a learning tool around which problems we might come across in population studies, and how to statistically solve them, and quality check the data.
+This is not intended to be high-throughput, more as a showcase and learning tool around which problems we might come across in population studies, and how to statistically solve them, and quality check the data. There are probably much better resources for very high-throughput processing of 100,000s of thousands of genomes, and rich phenotypic data, which honestly, you'd want cloud-based, distributed, containerised, and with a powerful database storing your variants data.
 
 ---
 
