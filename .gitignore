@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Cython and Jupyter cache
+*.c
+*.ipynb_checkpoints
+
+# R cache (if using rpy2)
+.Rhistory
+.RData
+.Rproj.user/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Results and temporary data
+results/
+
+# OS files
+.DS_Store
+Thumbs.db
+
