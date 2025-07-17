@@ -1,3 +1,5 @@
+import sys, os
+sys.path.append(os.path.abspath("src"))
 
 from simulate.simulate import simulate_acgt_genotypes, simulate_phenotype
 from utils.genotype_encoding import acgt_to_dosage

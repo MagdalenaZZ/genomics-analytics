@@ -44,7 +44,8 @@ def simulate_phenotype(geno_df, causal_snps=None, noise=1.0):
         a1, a2 = g[0], g[1]
         return sum([1 if a == 'G' else 0 for a in (a1, a2)])  # Example: use 'G' as minor
 
-    encoded = geno_df[causal_snps].applymap(encode)
+    #encoded = geno_df[causal_snps].applymap(encode)
+    encoded = geno_df[causal_snps].apply(lambda col: col.map(encode))
     genetic_score = encoded.sum(axis=1)
     phenotype = genetic_score + np.random.normal(0, noise, size=len(genetic_score))
     return phenotype
