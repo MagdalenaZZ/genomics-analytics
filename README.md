@@ -144,10 +144,6 @@ python notebooks/phewas_binary_demo.py
 * `CADD`, `REVEL`, `PolyPhen-2`, `SIFT` (functional impact prediction)
 * `dbNSFP` (integrated database of variant annotations)
 
-<<<<<<< HEAD
-Built for reproducible genomic analysis.
-=======
->>>>>>> 0dd79d2 (Updated readme)
 
 ---
 
