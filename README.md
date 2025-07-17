@@ -1,12 +1,14 @@
 # 👬 Genomics Analytics Toolkit
 
-A modular Python toolkit for advanced population-level genomic analysis, supporting:
+A modular Python toolkit for demonstrating advanced population-level genomic analysis, supporting:
 
 * ✅ Genome-Wide Association Studies (**GWAS**)
 * ✅ Phenome-Wide Association Studies (**PheWAS**)
 * ✅ Fine-mapping with **SuSiE**
 * ✅ SNP ranking using P-values, PIPs, and effect sizes
-* ⏳ Future: Selection scans, patient pairing, gene-based stats
+* ⏳ Future: Selection scans, patient pairing, gene-based stats, full list in Docs/
+
+This is not intended to be high-throughput, more as a learning tool around which problems we might come across in population studies, and how to statistically solve them, and quality check the data.
 
 ---
 
@@ -26,14 +28,13 @@ genomics-analytics/
 ## 🔧 Setup Instructions
 
 ```bash
-conda create -n genomics python=3.11
-conda activate genomics
+conda env create -f environment.yml
+conda activate py311
 pip install -r requirements.txt
-conda install -c conda-forge rpy2 r-susier
 ```
 
 Install MAGMA for here: https://cncr.nl/research/magma/
-It gives you Generalized gene-set analysis of GWAS data. 
+It gives you a Generalized gene-set analysis of GWAS data. 
 
 ---
 
@@ -99,14 +100,14 @@ python notebooks/phewas_binary_demo.py
 * [ ] Gene-based testing (e.g., MAGMA, SKAT)
 * [ ] Polygenic Risk Scoring
 * [ ] Population structure / selection (e.g., Fst, iHS)
-* [ ] SHAP/XGBoost variant prioritization
+* [ ] SHAP/XGBoost variant prioritisation
 * [ ] Web dashboard (Streamlit or Dash)
 
 ---
 
 ## 👥 Contributors
 
-Built with ❤️ for reproducible genomic analysis.
+Built for reproducible genomic analysis.
 
 ---
 
