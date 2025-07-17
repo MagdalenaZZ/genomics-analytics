@@ -32,6 +32,9 @@ pip install -r requirements.txt
 conda install -c conda-forge rpy2 r-susier
 ```
 
+Install MAGMA for here: https://cncr.nl/research/magma/
+It gives you Generalized gene-set analysis of GWAS data. 
+
 ---
 
 ## 🔬 Example Analyses
