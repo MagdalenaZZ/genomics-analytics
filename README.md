@@ -105,11 +105,52 @@ python notebooks/phewas_binary_demo.py
 
 ---
 
-## 👥 Contributors
+### ❓ **Example Problem: How do I analyze complex disorder genetics?**
 
+**Context**: Complex disorders (e.g., diabetes, schizophrenia, asthma) are not caused by a single mutation. Instead, they:
+
+* Do not follow Mendelian inheritance
+* Are influenced by many variants with small effects
+* Involve gene–environment interactions
+* Show heritability, but have heterogeneous genetic causes and phenotype
+
+**Approaches**:
+
+* Perform **GWAS** to detect common variants with small effects
+* Use **polygenic risk scores** to estimate cumulative risk
+* Partition heritability to tissues/functions using methods like **LDSC**
+* Explore gene–environment interactions and GxE models
+
+**Statistical Tools**:
+
+* `BOLT-LMM`, `SAIGE`, `REGENIE` for GWAS on large cohorts
+* `PRSice-2`, `LDpred2`, `SBayesR` for polygenic scoring
+* `LDSC`, `S-LDSC` for heritability partitioning
+* `GEM`, `INTERSNP` for modeling GxE interactions
+
+**Context**: You have raw variants or summary statistics and want to link them to genes, transcripts, functions, or predict deleteriousness.
+
+**Approaches**:
+
+* Annotate SNPs with gene and consequence information
+* Filter by predicted impact or frequency (e.g., consider removing very common variants)
+* Prioritize using conservation scores or deleteriousness predictors
+
+**Statistical Tools**:
+
+* `VEP` (Ensembl Variant Effect Predictor)
+* `ANNOVAR` (multi-annotation framework)
+* `SnpEff` (fast, locally runnable)
+* `CADD`, `REVEL`, `PolyPhen-2`, `SIFT` (functional impact prediction)
+* `dbNSFP` (integrated database of variant annotations)
+
+<<<<<<< HEAD
 Built for reproducible genomic analysis.
+=======
+>>>>>>> 0dd79d2 (Updated readme)
 
 ---
+
 
 ## 📜 License
 
