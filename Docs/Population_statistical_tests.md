@@ -19,6 +19,7 @@ This document outlines frequent challenges encountered in population-level genom
 * `MAGMA`, `SKAT`, `VEGAS2`
 * `gseapy`, `fgsea`, `ReactomePA`
 * `OpenTargets`, `DisGeNET`, `Enrichr`
+* Variant annotation: `VEP`, `ANNOVAR`, `SnpEff` *(if added as preprocessing)*
 
 ---
 
@@ -41,14 +42,14 @@ This document outlines frequent challenges encountered in population-level genom
 
 ### ❓ **Problem 3: Can I reposition a drug from one disease to another using shared genetic architecture?**
 
-**Context**: You want to explore drug repurposing by linking genetic mechanisms across diseases. 
+**Context**: You want to explore drug repurposing by linking genetic mechanisms across diseases.
 
 **Approaches**:
 
 * Shared pathway analysis between GWAS hits
 * Gene overlap between diseases
 * Network-based proximity of disease genes to drug targets
-See my drugsXdisease package
+  See my drugsXdisease package
 
 **Statistical Tools**:
 
@@ -60,7 +61,7 @@ See my drugsXdisease package
 
 ### ❓ **Problem 4: How can I discover different genetic subtypes within one phenotypic disease?**
 
-**Context**: A phenotype (e.g., diabetes, autism, cancer) may actually include several genetically distinct subtypes that present similarly. Maybe wgs or exprression data exists, together with clinical data, which allows for in-depth exploration of disease drivers. 
+**Context**: A phenotype (e.g., diabetes, autism, cancer) may actually include several genetically distinct subtypes that present similarly. Maybe wgs or exprression data exists, together with clinical data, which allows for in-depth exploration of disease drivers.
 
 **Approaches**:
 
@@ -108,7 +109,7 @@ See my drugsXdisease package
 
 * `PRSice-2` (best for quick setup)
 * `LDpred2` (R, LD-aware, very robust)
-* `plink2` with score files
+* `plink2` with score files (also good for PRS scoring)
 * `scikit-PRS` (experimental Python version)
 
 ---
@@ -125,7 +126,7 @@ See my drugsXdisease package
 **Statistical Tools**:
 
 * `SuSiE` (R package, works well with LD blocks)
-* `FINEMAP`, `CAVIAR`, `PAINTOR`
+* `FINEMAP`, `CAVIAR`, `PAINTOR` (functional fine-mapping)
 * `rpy2` for Python–R bridging to call `susieR`
 
 ---
@@ -141,8 +142,8 @@ See my drugsXdisease package
 
 **Statistical Tools**:
 
-* `plink` or `smartpca` for PCA
-* `LMMs`: `GEMMA`, `BOLT-LMM`, `SAIGE`
+* `plink`, `plink2`, or `smartpca` for PCA
+* `LMMs`: `GEMMA`, `BOLT-LMM`, `SAIGE`, `REGENIE`
 * `fastGWA` (UK Biobank-scale tools)
 
 ---
@@ -196,6 +197,25 @@ See my drugsXdisease package
 * `matchit` (R), `pymatch`, or `propensity-score-matching` in Python
 * Custom PCA matching (e.g., `pca_matching.py` in your toolkit)
 
+---
+
+### ❓ **Problem 12: How do I annotate and filter variants for downstream analysis?**
+
+**Context**: You have raw variants or summary statistics and want to link them to genes, transcripts, functions, or predict deleteriousness.
+
+**Approaches**:
+
+* Annotate SNPs with gene and consequence information
+* Filter by predicted impact or frequency (e.g., remove common variants)
+* Prioritize using conservation scores or deleteriousness predictors
+
+**Statistical Tools**:
+
+* `VEP` (Ensembl Variant Effect Predictor)
+* `ANNOVAR` (multi-annotation framework)
+* `SnpEff` (fast, locally runnable)
+* `CADD`, `REVEL`, `PolyPhen-2`, `SIFT` (functional impact prediction)
+* `dbNSFP` (integrated database of variant annotations)
 
 
 
